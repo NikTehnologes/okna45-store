@@ -1,0 +1,7 @@
+"""Console example with enough output to use PicoTerm scrollback."""
+def run(term, args):
+    number = int(args[0]) if args else 7
+    term.write('Multiplication table for %d\n' % number)
+    for index in range(1, 41):
+        term.write('%d * %d = %d\n' % (number, index, number * index))
+    term.write('Up/Down scroll rows; Left/Right scroll a page at the prompt.\n')

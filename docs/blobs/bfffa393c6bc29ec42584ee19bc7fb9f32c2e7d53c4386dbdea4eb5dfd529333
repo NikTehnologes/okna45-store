@@ -1,0 +1,5 @@
+"""Example package installed by Okna45 apt."""
+
+
+def run(term, args):
+    term.write('Hello from an installed Okna45 package!\n')
