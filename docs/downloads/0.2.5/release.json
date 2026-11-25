@@ -1,0 +1,63 @@
+{
+  "channel_versions": {
+    "software": "0.2.5",
+    "system": "0.2.5"
+  },
+  "channels": {
+    "software": {
+      "clear.py": "0eb0910220e2208245829f92a7439837fb23ba24155fd9ad9924bfdf45ff57ff",
+      "copy.py": "38083ab1555d0a2f22939e9c97f8f6130629662790f50455be88f7846c395106",
+      "curl.py": "0cfd8e270af1f348e662faa3ba91bb9355ae0f6dc8150ad4431a2d6154ef8aab",
+      "del.py": "e4cd32aec5b7e96cf191611243020f3fa8100bce374819b7bdf6789cd98427b4",
+      "df.py": "2a2b3fbdc5a2884edbc03578df87399f1fafee1efa74edfd9612b3624738560b",
+      "dir.py": "3a5183fa4c2c60589b197b29a539b510ecfbf6b931c400a7d5b7f47f4a4a81fa",
+      "info.py": "2c7ce99527e2d5a3b60c2d212abbc0c69af8c7aa881a0a75335abe6bf093dbf1",
+      "led.py": "81d5fb39fe8c47b6e48cd3f6136d302d93ec83b31c6ccb8a91c85fc1893ae3f1",
+      "md.py": "936f8e52290ded4ac62e02cc2ccac90cf539a3b73818384fbdc656f327a412d2",
+      "ok45_apps.py": "ebc521037067b6f2d91136c2f5ed008a5470699efb73776b251a79fab8437c95",
+      "ok45_run_app.py": "7640401a985faee04d7f28e8f7cbe92b1cc381e79b61f9b03d6b8600e4d9d2f2",
+      "ok45_store_app.py": "f9e11c16e4ee9d388baabd0db0de1bccd62709f55ce9b788925694d7ebe953ad",
+      "ok45_wifi_app.py": "c5f412c255f2f6d2ff2d405037ce04a320bf2c6b977bf9ab496ea1b5740e816d",
+      "publish.py": "d08ac31d9570466a9e952b03b988d499d043f92ae4bc3940921b49236b793497",
+      "pwd.py": "480f3efb236d91fa5dee83cb6e0f3c0fa9f299c14dc2a3321d8f2aae6a443e71",
+      "reboot.py": "6fb3102d0eb44553568f55fabd873274953fbb00e22805f981df88cdba67b185",
+      "ren.py": "7b196022c36d5c5bdda8ae253cd88294d23ef7cc314c19acee702891c9040bdf",
+      "run.py": "2216a73286fd6aead89f01366b90b40cb6d21e58426b1a5ec317d81a84ccc7ed",
+      "type.py": "280832c1fce54a510e95c84939f89ce11168255522fc755f92f67eff83cc8a06"
+    },
+    "system": {
+      "apt.py": "0533d11cec617e9dd26a29fd8557d65b490cb36669ef1a77cf1ac36e8c80dbe7",
+      "desktop.py": "cc27d8bf010e08860dea8c4c460469db6b49d2f4837f5de5cebcb5e2f6758578",
+      "install.py": "3c39a6283f467776a8f9aa2aeda35497dc4b9c64c92de0e1d80c528a343eeb53",
+      "kill.py": "84839fefa2f59bb30fd45c75568d77faa58b8f564dafee9955dd8ae4f40755d4",
+      "main.py": "0488c0ac787b92400b2cec8315e0095576f09c7d6ae80521808b409ecae1ec29",
+      "ok45_api.py": "35104041ff4ddb14acd7582cf5737c30690ad06f374de4b4f7c285633a83d7e6",
+      "ok45_bootanim.oba": "4f3f863b801e18265cdfb6a482b0ed56b8e01518393721158c8d7f4c61ffe180",
+      "ok45_desktop.py": "e90a8240a30a0fc04cfb19d279bfeb670d9f44a2fb2fe87256a6ee3b3c9307a3",
+      "ok45_fs.py": "88b72436afc0b6915904c818514818a594fdecb1925246bf25e6b6562f0b289a",
+      "ok45_kernel.py": "72ff6ed803cab715bcac49f06b4bd2eaa403a3f2a0121f04788beb391be3885e",
+      "ok45_loader.py": "9d551837383fe51283f8d39eb13b031d77abd6332987cf64f77614d47118943f",
+      "ok45_net.py": "7b9e34107c463962ddf5f05c9c407743d799b23f355decfaf6db20e99d5b8435",
+      "ok45_pkg.py": "25e5f677d6f1097e639223a69c37e0b24437dc2f2c8b608bfed81a1346ca8bdb",
+      "ok45_registry.py": "ef6b382dea2b4ad7e810c7f35fba9b3b275f09838eacc11549320e20526f8634",
+      "ok45_script.py": "995745c2b169eeb59ce90bfb8feace0376397123af5d78be97de845ea22f7f14",
+      "ok45_sin.py": "a9948605155b9a706ea8939a80ed5ca08c8f261db1be6c3474968e1731933e3d",
+      "ok45_splash.py": "b71d004838378b2631f2e944b192d2a2a1326a5b1d5b67e430559101cb76ade5",
+      "ok45_store.py": "e2e68bbd68477aed577a97e94293aa2e0539dfee790640deb15c2b47ead6bb9b",
+      "ok45_time.py": "c65bf3f813f4cd2d1f5110368519db53535c1a8702aab3c275fa5087689236a9",
+      "ok45_tx.py": "895605d022124b9119d99cdd22a7b41a4086900b015272740d694c808b381a0d",
+      "ok45_ui.py": "044bb9ad42d2b95bfcba6b44ff0f3a4a05e66220a7ad1f08bd4b96573c735c16",
+      "ok45_update.py": "ff0955f09cf0b660189b22ee25128815a5fd5d6b185acef5292c1f6edd6e92ab",
+      "ps.py": "6403f326e5c000fa10c21462da26f74a3830f8151b3ff13ef5f29743fa9846f0",
+      "timezone.py": "8399642009286a9c967ad504ea8e247698850160b47bdeac6a593336658475d7",
+      "update.py": "5674ffc117750cef238ba2125b2cce14c4aeefb104feb55322a2ccb1bbce421a",
+      "updates.py": "f9c6fa49df58237c7027cfa2355e14eda0cff3b8a0bfc02539e53f5523a0f827"
+    }
+  },
+  "format": 1,
+  "stable_files": {
+    "boot.py": "317cc2dbc5489b3e4f1abc1de924f10cc7dd48ecc03836546cf695b1eda40032",
+    "ok45_boot.py": "f60d104e392b3d3758c82af4c374822614e5c390001d51121f2e685f70f44538"
+  },
+  "version": "0.2.5"
+}
