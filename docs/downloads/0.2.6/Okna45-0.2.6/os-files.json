@@ -1,0 +1,383 @@
+{
+  "format": 1,
+  "product": "Okna45",
+  "version": "0.2.6",
+  "files": [
+    {
+      "path": "boot.py",
+      "source": "files/boot.py",
+      "channel": "stable",
+      "size": 196,
+      "sha256": "317cc2dbc5489b3e4f1abc1de924f10cc7dd48ecc03836546cf695b1eda40032"
+    },
+    {
+      "path": "ok45_boot.py",
+      "source": "files/ok45_boot.py",
+      "channel": "stable",
+      "size": 4205,
+      "sha256": "f60d104e392b3d3758c82af4c374822614e5c390001d51121f2e685f70f44538"
+    },
+    {
+      "path": "ili9341.py",
+      "source": "files/ili9341.py",
+      "channel": "stable",
+      "size": 38855,
+      "sha256": "e8d9ed9bed8549c0fee5e36fcb4a65feb393011bd0b42dd407a9cd8c3a502559"
+    },
+    {
+      "path": "main.py",
+      "source": "files/main.py",
+      "channel": "system",
+      "size": 3749,
+      "sha256": "27ce562bdf4e163aee5792a16bc0929c2523d0c3b7c85d86daaa2006886fc35e"
+    },
+    {
+      "path": "desktop.py",
+      "source": "files/desktop.py",
+      "channel": "system",
+      "size": 1073,
+      "sha256": "cc27d8bf010e08860dea8c4c460469db6b49d2f4837f5de5cebcb5e2f6758578"
+    },
+    {
+      "path": "apt.py",
+      "source": "files/apt.py",
+      "channel": "system",
+      "size": 254,
+      "sha256": "0533d11cec617e9dd26a29fd8557d65b490cb36669ef1a77cf1ac36e8c80dbe7"
+    },
+    {
+      "path": "install.py",
+      "source": "files/install.py",
+      "channel": "system",
+      "size": 331,
+      "sha256": "3c39a6283f467776a8f9aa2aeda35497dc4b9c64c92de0e1d80c528a343eeb53"
+    },
+    {
+      "path": "update.py",
+      "source": "files/update.py",
+      "channel": "system",
+      "size": 249,
+      "sha256": "5674ffc117750cef238ba2125b2cce14c4aeefb104feb55322a2ccb1bbce421a"
+    },
+    {
+      "path": "ps.py",
+      "source": "files/ps.py",
+      "channel": "system",
+      "size": 407,
+      "sha256": "6403f326e5c000fa10c21462da26f74a3830f8151b3ff13ef5f29743fa9846f0"
+    },
+    {
+      "path": "kill.py",
+      "source": "files/kill.py",
+      "channel": "system",
+      "size": 518,
+      "sha256": "84839fefa2f59bb30fd45c75568d77faa58b8f564dafee9955dd8ae4f40755d4"
+    },
+    {
+      "path": "timezone.py",
+      "source": "files/timezone.py",
+      "channel": "system",
+      "size": 326,
+      "sha256": "8399642009286a9c967ad504ea8e247698850160b47bdeac6a593336658475d7"
+    },
+    {
+      "path": "ok45_fs.py",
+      "source": "files/ok45_fs.py",
+      "channel": "system",
+      "size": 3214,
+      "sha256": "88b72436afc0b6915904c818514818a594fdecb1925246bf25e6b6562f0b289a"
+    },
+    {
+      "path": "ok45_tx.py",
+      "source": "files/ok45_tx.py",
+      "channel": "system",
+      "size": 2245,
+      "sha256": "895605d022124b9119d99cdd22a7b41a4086900b015272740d694c808b381a0d"
+    },
+    {
+      "path": "ok45_sin.py",
+      "source": "files/ok45_sin.py",
+      "channel": "system",
+      "size": 4088,
+      "sha256": "a9948605155b9a706ea8939a80ed5ca08c8f261db1be6c3474968e1731933e3d"
+    },
+    {
+      "path": "ok45_update.py",
+      "source": "files/ok45_update.py",
+      "channel": "system",
+      "size": 7180,
+      "sha256": "8e73b2871c124a5bac54366291de6c554e0d9f76afadee399f101f7aedac62e0"
+    },
+    {
+      "path": "ok45_kernel.py",
+      "source": "files/ok45_kernel.py",
+      "channel": "system",
+      "size": 5507,
+      "sha256": "72ff6ed803cab715bcac49f06b4bd2eaa403a3f2a0121f04788beb391be3885e"
+    },
+    {
+      "path": "ok45_ui.py",
+      "source": "files/ok45_ui.py",
+      "channel": "system",
+      "size": 16140,
+      "sha256": "044bb9ad42d2b95bfcba6b44ff0f3a4a05e66220a7ad1f08bd4b96573c735c16"
+    },
+    {
+      "path": "ok45_api.py",
+      "source": "files/ok45_api.py",
+      "channel": "system",
+      "size": 5357,
+      "sha256": "35104041ff4ddb14acd7582cf5737c30690ad06f374de4b4f7c285633a83d7e6"
+    },
+    {
+      "path": "ok45_registry.py",
+      "source": "files/ok45_registry.py",
+      "channel": "system",
+      "size": 7803,
+      "sha256": "ef6b382dea2b4ad7e810c7f35fba9b3b275f09838eacc11549320e20526f8634"
+    },
+    {
+      "path": "ok45_pkg.py",
+      "source": "files/ok45_pkg.py",
+      "channel": "system",
+      "size": 19933,
+      "sha256": "25e5f677d6f1097e639223a69c37e0b24437dc2f2c8b608bfed81a1346ca8bdb"
+    },
+    {
+      "path": "ok45_desktop.py",
+      "source": "files/ok45_desktop.py",
+      "channel": "system",
+      "size": 29529,
+      "sha256": "74ffb411ab855b5fe71136bb1c2ee663680961df2790e7aac94746c2d34e84ef"
+    },
+    {
+      "path": "ok45_time.py",
+      "source": "files/ok45_time.py",
+      "channel": "system",
+      "size": 2620,
+      "sha256": "c65bf3f813f4cd2d1f5110368519db53535c1a8702aab3c275fa5087689236a9"
+    },
+    {
+      "path": "ok45_net.py",
+      "source": "files/ok45_net.py",
+      "channel": "system",
+      "size": 3934,
+      "sha256": "7b9e34107c463962ddf5f05c9c407743d799b23f355decfaf6db20e99d5b8435"
+    },
+    {
+      "path": "ok45_script.py",
+      "source": "files/ok45_script.py",
+      "channel": "system",
+      "size": 4936,
+      "sha256": "995745c2b169eeb59ce90bfb8feace0376397123af5d78be97de845ea22f7f14"
+    },
+    {
+      "path": "ok45_store.py",
+      "source": "files/ok45_store.py",
+      "channel": "system",
+      "size": 14822,
+      "sha256": "e2e68bbd68477aed577a97e94293aa2e0539dfee790640deb15c2b47ead6bb9b"
+    },
+    {
+      "path": "updates.py",
+      "source": "files/updates.py",
+      "channel": "system",
+      "size": 457,
+      "sha256": "f9c6fa49df58237c7027cfa2355e14eda0cff3b8a0bfc02539e53f5523a0f827"
+    },
+    {
+      "path": "ok45_loader.py",
+      "source": "files/ok45_loader.py",
+      "channel": "system",
+      "size": 3953,
+      "sha256": "9d551837383fe51283f8d39eb13b031d77abd6332987cf64f77614d47118943f"
+    },
+    {
+      "path": "ok45_splash.py",
+      "source": "files/ok45_splash.py",
+      "channel": "system",
+      "size": 12353,
+      "sha256": "193301176fa184c1202303460b4a827e2cd15cdbe4df87069f8827d134dc4d3b"
+    },
+    {
+      "path": "ok45_bootanim.oba",
+      "source": "files/ok45_bootanim.oba",
+      "channel": "system",
+      "size": 17183,
+      "sha256": "4f3f863b801e18265cdfb6a482b0ed56b8e01518393721158c8d7f4c61ffe180"
+    },
+    {
+      "path": "ok45_apps.py",
+      "source": "files/ok45_apps.py",
+      "channel": "software",
+      "size": 38817,
+      "sha256": "ebc521037067b6f2d91136c2f5ed008a5470699efb73776b251a79fab8437c95"
+    },
+    {
+      "path": "ok45_wifi_app.py",
+      "source": "files/ok45_wifi_app.py",
+      "channel": "software",
+      "size": 5657,
+      "sha256": "c5f412c255f2f6d2ff2d405037ce04a320bf2c6b977bf9ab496ea1b5740e816d"
+    },
+    {
+      "path": "run.py",
+      "source": "files/run.py",
+      "channel": "software",
+      "size": 1323,
+      "sha256": "2216a73286fd6aead89f01366b90b40cb6d21e58426b1a5ec317d81a84ccc7ed"
+    },
+    {
+      "path": "info.py",
+      "source": "files/info.py",
+      "channel": "software",
+      "size": 395,
+      "sha256": "2c7ce99527e2d5a3b60c2d212abbc0c69af8c7aa881a0a75335abe6bf093dbf1"
+    },
+    {
+      "path": "dir.py",
+      "source": "files/dir.py",
+      "channel": "software",
+      "size": 617,
+      "sha256": "3a5183fa4c2c60589b197b29a539b510ecfbf6b931c400a7d5b7f47f4a4a81fa"
+    },
+    {
+      "path": "clear.py",
+      "source": "files/clear.py",
+      "channel": "software",
+      "size": 42,
+      "sha256": "0eb0910220e2208245829f92a7439837fb23ba24155fd9ad9924bfdf45ff57ff"
+    },
+    {
+      "path": "df.py",
+      "source": "files/df.py",
+      "channel": "software",
+      "size": 358,
+      "sha256": "2a2b3fbdc5a2884edbc03578df87399f1fafee1efa74edfd9612b3624738560b"
+    },
+    {
+      "path": "pwd.py",
+      "source": "files/pwd.py",
+      "channel": "software",
+      "size": 123,
+      "sha256": "480f3efb236d91fa5dee83cb6e0f3c0fa9f299c14dc2a3321d8f2aae6a443e71"
+    },
+    {
+      "path": "reboot.py",
+      "source": "files/reboot.py",
+      "channel": "software",
+      "size": 90,
+      "sha256": "6fb3102d0eb44553568f55fabd873274953fbb00e22805f981df88cdba67b185"
+    },
+    {
+      "path": "copy.py",
+      "source": "files/copy.py",
+      "channel": "software",
+      "size": 318,
+      "sha256": "38083ab1555d0a2f22939e9c97f8f6130629662790f50455be88f7846c395106"
+    },
+    {
+      "path": "del.py",
+      "source": "files/del.py",
+      "channel": "software",
+      "size": 208,
+      "sha256": "e4cd32aec5b7e96cf191611243020f3fa8100bce374819b7bdf6789cd98427b4"
+    },
+    {
+      "path": "md.py",
+      "source": "files/md.py",
+      "channel": "software",
+      "size": 205,
+      "sha256": "936f8e52290ded4ac62e02cc2ccac90cf539a3b73818384fbdc656f327a412d2"
+    },
+    {
+      "path": "ren.py",
+      "source": "files/ren.py",
+      "channel": "software",
+      "size": 227,
+      "sha256": "7b196022c36d5c5bdda8ae253cd88294d23ef7cc314c19acee702891c9040bdf"
+    },
+    {
+      "path": "led.py",
+      "source": "files/led.py",
+      "channel": "software",
+      "size": 329,
+      "sha256": "81d5fb39fe8c47b6e48cd3f6136d302d93ec83b31c6ccb8a91c85fc1893ae3f1"
+    },
+    {
+      "path": "type.py",
+      "source": "files/type.py",
+      "channel": "software",
+      "size": 332,
+      "sha256": "280832c1fce54a510e95c84939f89ce11168255522fc755f92f67eff83cc8a06"
+    },
+    {
+      "path": "curl.py",
+      "source": "files/curl.py",
+      "channel": "software",
+      "size": 442,
+      "sha256": "0cfd8e270af1f348e662faa3ba91bb9355ae0f6dc8150ad4431a2d6154ef8aab"
+    },
+    {
+      "path": "ok45_run_app.py",
+      "source": "files/ok45_run_app.py",
+      "channel": "software",
+      "size": 2850,
+      "sha256": "7640401a985faee04d7f28e8f7cbe92b1cc381e79b61f9b03d6b8600e4d9d2f2"
+    },
+    {
+      "path": "ok45_store_app.py",
+      "source": "files/ok45_store_app.py",
+      "channel": "software",
+      "size": 15954,
+      "sha256": "f9e11c16e4ee9d388baabd0db0de1bccd62709f55ce9b788925694d7ebe953ad"
+    },
+    {
+      "path": "publish.py",
+      "source": "files/publish.py",
+      "channel": "software",
+      "size": 192,
+      "sha256": "d08ac31d9570466a9e952b03b988d499d043f92ae4bc3940921b49236b793497"
+    }
+  ],
+  "delete_unlisted": false,
+  "preserve": [
+    "repo/",
+    "data/",
+    "apps/",
+    "scripts/",
+    "documents/",
+    "wifi.json",
+    "notes.txt",
+    "system/pkg/",
+    "system/store/"
+  ],
+  "notes": "Only listed files belong to this OS release. Never copy repo; never delete unknown files.",
+  "minimum_host_updater": "0.2.5 OBA2 support",
+  "migration": "From OS <=0.2.4 use the current host updater or USB bootstrap; old Store allowlists reject the new .oba.",
+  "flash_estimate": {
+    "files": 48,
+    "bytes": 279896,
+    "allocation_estimate": 409600,
+    "block": 4096,
+    "budget": 420000,
+    "capacity": 800000,
+    "optional": [
+      "clock.py",
+      "demo_3d.py",
+      "demo_gfx.py",
+      "demo_text.py",
+      "edit.py",
+      "hello.py",
+      "help.py",
+      "NotMain.py",
+      "ok45_legacy.py",
+      "sdcard.py",
+      "setup.py",
+      "sysmon.py",
+      "weather.py",
+      "web.py",
+      "wifi.py"
+    ]
+  }
+}
