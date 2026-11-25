@@ -1,0 +1,134 @@
+"""Small persistent checklist; writes only on Save or closing a changed list."""
+from ok45_api import Application, ENTER, UP, DOWN, BACKSPACE, DELETE, LIGHT, WHITE, BLACK, NAVY
+
+
+class Main(Application):
+    title = 'Checklist'
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        data = context.load_json(default={'items': []})
+        items = data.get('items') if isinstance(data, dict) else None
+        if (not isinstance(items, list) or len(items) > 16 or
+                any(not isinstance(v, list) or len(v) != 2 or not isinstance(v[0], str) or
+                    not 1 <= len(v[0]) <= 48 or any(not 32 <= ord(c) <= 126 for c in v[0]) or
+                    not isinstance(v[1], bool) for v in items)):
+            raise ValueError('Invalid saved checklist; original file kept')
+        self.items = items
+        self.selected, self.scroll = 0, 0
+        self.draft, self.editing, self.field, self.dirty = '', None, False, False
+        self.status = '16 tasks / 48 chars each'
+
+    def rows(self):
+        return max(1, (self.window.client()[3] - 76) // 12)
+
+    def select(self, delta):
+        self.selected = max(0, min(len(self.items) - 1, self.selected + delta))
+        self.scroll = max(0, min(self.scroll, self.selected))
+        if self.selected >= self.scroll + self.rows():
+            self.scroll = self.selected - self.rows() + 1
+
+    def controls(self):
+        x, y, w, h = self.window.client()
+        controls = self.toolbar((('add', 'Add'), ('done', 'Done'), ('edit', 'Edit'), ('del', 'Del'), ('save', 'Save')))
+        controls.append({'action': 'field', 'button': False, 'rect': [x + 3, y + h - 42, w - 6, 18]})
+        for row in range(min(self.rows(), len(self.items) - self.scroll)):
+            controls.append({'action': 'select', 'index': self.scroll + row, 'button': False,
+                             'rect': [x + 3, y + 18 + row * 12, w - 26, 12]})
+        for i, action in enumerate(('prev', 'next')):
+            controls.append({'action': action, 'label': '^' if i == 0 else 'v',
+                             'rect': [x + w - 21, y + 18 + i * 22, 18, 18]})
+        return controls
+
+    def activate(self, control):
+        action = control['action']
+        if action in ('field', 'edit'):
+            if action == 'edit' and self.items:
+                self.editing = self.selected
+                self.draft = self.items[self.selected][0]
+            self.field = True
+            self.context.input()
+        elif action == 'select':
+            self.selected, self.field = control['index'], False
+        elif action in ('prev', 'next'):
+            self.select(-1 if action == 'prev' else 1)
+        elif action == 'add':
+            text = self.draft.strip()
+            if not text:
+                self.field = True
+                self.context.input()
+            elif self.editing is not None:
+                self.items[self.editing][0] = text
+                self.dirty = True
+                self.draft, self.editing, self.field = '', None, False
+            elif len(self.items) < 16:
+                self.items.append([text, False])
+                self.select(16)
+                self.dirty, self.draft, self.field = True, '', False
+            else:
+                self.status = 'List full: delete a task'
+        elif action in ('done', 'del') and self.items:
+            if action == 'done':
+                self.items[self.selected][1] = not self.items[self.selected][1]
+            else:
+                del self.items[self.selected]
+                self.draft, self.editing, self.field = '', None, False
+                self.select(0)
+            self.dirty = True
+        elif action == 'save':
+            if self.draft.strip():
+                self.activate({'action': 'add'})
+                if self.draft.strip():
+                    return
+            try:
+                self.context.save_json({'items': self.items})
+                self.dirty, self.status = False, 'Saved in /data/todo'
+            except Exception as error:
+                self.status = str(error)[:80]
+        self.invalidate()
+
+    def key(self, code):
+        if code in (UP, DOWN):
+            self.select(-1 if code == UP else 1)
+            self.field = False
+        elif code == ENTER:
+            self.activate({'action': 'add' if self.field else 'done'})
+        elif code in (BACKSPACE, DELETE) and self.field:
+            self.draft = self.draft[:-1]
+        elif 32 <= code <= 126:
+            if not self.field:
+                self.draft, self.editing, self.field = '', None, True
+            if len(self.draft) < 48:
+                self.draft += chr(code)
+        self.invalidate()
+
+    def close(self):
+        if self.draft.strip():
+            self.activate({'action': 'add'})
+            if self.draft.strip():
+                return False
+        if self.dirty:
+            self.activate({'action': 'save'})
+        return not self.dirty
+
+    def semantic(self):
+        return {'items': self.items, 'draft': self.draft, 'dirty': self.dirty,
+                'selected': self.selected, 'status': self.status}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, LIGHT)
+        canvas.text(x + 4, y + 4, 'Done %d/%d%s' % (sum(v[1] for v in self.items), len(self.items),
+                                                  '*' if self.dirty or self.draft.strip() else ''))
+        for row in range(min(self.rows(), len(self.items) - self.scroll)):
+            index = self.scroll + row
+            text, done = self.items[index]
+            selected = index == self.selected
+            canvas.fill((x + 3, y + 18 + row * 12, w - 26, 12), NAVY if selected else WHITE)
+            canvas.text(x + 5, y + 20 + row * 12, (('[x] ' if done else '[ ] ') + text)[:(w - 32) // 8],
+                        WHITE if selected else BLACK)
+        canvas.text(x + 4, y + h - 55, self.status[:(w - 8) // 8])
+        canvas.fill((x + 3, y + h - 42, w - 6, 18), WHITE)
+        marker = '_' if self.field else ''
+        canvas.text(x + 5, y + h - 37, ((self.draft + marker) or 'Add / type a task')[-((w - 12) // 8):])
+        self.draw_controls(canvas)

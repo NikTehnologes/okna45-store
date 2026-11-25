@@ -1,0 +1,165 @@
+"""10x20 Tetris in 200 bytes of board; four-cell masks and cooperative ticks."""
+from ok45_api import Application, LEFT, RIGHT, UP, DOWN, ENTER, ticks_ms, LIGHT, NAVY, rgb
+
+SHAPES = ((0x0F00, 0x2222, 0x00F0, 0x4444), (0x8E00, 0x6440, 0x0E20, 0x44C0),
+          (0x2E00, 0x4460, 0x0E80, 0xC440), (0x6600,) * 4, (0x6C00, 0x4620, 0x06C0, 0x8C40),
+          (0x4E00, 0x4640, 0x0E40, 0x4C40), (0xC600, 0x2640, 0x0C60, 0x4C80))
+COLORS = (NAVY, rgb(0, 220, 220), rgb(50, 100, 250), rgb(240, 150, 20),
+          rgb(240, 220, 20), rgb(50, 220, 100), rgb(200, 60, 220), rgb(240, 70, 70))
+
+
+class Main(Application):
+    title = 'Tetris Lite'
+    interval_ms = 100
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        self.seed = ticks_ms() & 65535
+        self.reset()
+
+    def reset(self):
+        self.board = bytearray(200)
+        self.lines, self.score, self.counter = 0, 0, 0
+        self.paused, self.over = True, False
+        self.next_piece = self.random_piece()
+        self.spawn()
+
+    def random_piece(self):
+        self.seed = (self.seed * 109 + 1021) & 65535
+        return self.seed % 7
+
+    def spawn(self):
+        self.piece, self.next_piece = self.next_piece, self.random_piece()
+        self.x, self.y, self.rotation, self.counter = 3, 0, 0, 0
+        if not self.fits(self.x, self.y, self.rotation):
+            self.over, self.paused = True, True
+
+    def cells(self, x, y, rotation):
+        mask = SHAPES[self.piece][rotation]
+        for i in range(16):
+            if mask & (0x8000 >> i):
+                yield x + i % 4, y + i // 4
+
+    def fits(self, x, y, rotation):
+        for col, row in self.cells(x, y, rotation):
+            if col < 0 or col >= 10 or row < 0 or row >= 20 or self.board[row * 10 + col]:
+                return False
+        return True
+
+    def layout(self):
+        x, y, w, h = self.window.client()
+        return x + 6, y + 16, min((w - 110) // 10, (h - 42) // 20)
+
+    def piece_rect(self):
+        bx, by, size = self.layout()
+        return bx + self.x * size, by + self.y * size, 4 * size, 4 * size
+
+    def move(self, dx=0, dy=0, rotation=None):
+        r = self.rotation if rotation is None else rotation
+        if self.paused or self.over or not self.fits(self.x + dx, self.y + dy, r):
+            return False
+        self.invalidate(self.piece_rect())
+        self.x, self.y, self.rotation = self.x + dx, self.y + dy, r
+        self.invalidate(self.piece_rect())
+        return True
+
+    def clear_rows(self):
+        target, cleared = 19, 0
+        for row in range(19, -1, -1):
+            if all(self.board[row * 10 + col] for col in range(10)):
+                cleared += 1
+            else:
+                if target != row:
+                    for col in range(10):
+                        self.board[target * 10 + col] = self.board[row * 10 + col]
+                target -= 1
+        for row in range(target + 1):
+            for col in range(10):
+                self.board[row * 10 + col] = 0
+        self.lines += cleared
+        self.score += (0, 100, 300, 500, 800)[min(4, cleared)]
+        return cleared
+
+    def lock(self):
+        for col, row in self.cells(self.x, self.y, self.rotation):
+            self.board[row * 10 + col] = self.piece + 1
+        self.clear_rows()
+        self.spawn()
+        self.invalidate()
+
+    def controls(self):
+        return self.toolbar((('left', '<'), ('right', '>'), ('rotate', 'Rot'), ('drop', 'Drop'),
+                             ('pause', 'Play' if self.paused else 'Stop'), ('new', 'New')))
+
+    def activate(self, control):
+        action = control['action']
+        if action == 'new':
+            self.reset()
+        elif action == 'pause' and not self.over:
+            self.paused = not self.paused
+        elif self.paused or self.over:
+            return
+        elif action in ('left', 'right'):
+            self.move(-1 if action == 'left' else 1)
+            return
+        elif action == 'rotate':
+            for kick in (0, -1, 1, -2, 2):
+                if self.move(kick, rotation=(self.rotation + 1) % 4):
+                    break
+            return
+        elif action == 'down':
+            if self.move(dy=1):
+                return
+            self.lock()
+        elif action == 'drop':
+            while self.fits(self.x, self.y + 1, self.rotation):
+                self.y += 1
+                self.score += 2
+            self.lock()
+        self.invalidate()
+
+    def key(self, code):
+        action = {LEFT: 'left', RIGHT: 'right', UP: 'rotate', DOWN: 'down', ENTER: 'pause', 32: 'drop',
+                  97: 'left', 100: 'right', 119: 'rotate', 115: 'down', 112: 'pause', 114: 'new'}
+        if 65 <= code <= 90:
+            code += 32
+        if code in action:
+            self.activate({'action': action[code]})
+
+    def tick(self):
+        if self.paused or self.over:
+            return
+        self.counter += 1
+        if self.counter >= max(2, 6 - self.lines // 5):
+            self.counter = 0
+            self.activate({'action': 'down'})
+
+    def semantic(self):
+        return {'score': self.score, 'lines': self.lines, 'paused': self.paused, 'over': self.over,
+                'board_bytes': len(self.board), 'next': self.next_piece}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, LIGHT)
+        canvas.text(x + 4, y + 3, 'Tetris ' + ('OVER' if self.over else 'PAUSED' if self.paused else ''))
+        bx, by, size = self.layout()
+        canvas.fill((bx, by, size * 10, size * 20), NAVY)
+        if canvas.clip:
+            first = max(0, (canvas.clip[1] - by) // size)
+            last = min(20, (canvas.clip[1] + canvas.clip[3] - by + size - 1) // size)
+            for row in range(first, last):
+                for col in range(10):
+                    value = self.board[row * 10 + col]
+                    if value:
+                        canvas.fill((bx + col * size, by + row * size, size - 1, size - 1), COLORS[value])
+        for col, row in self.cells(self.x, self.y, self.rotation):
+            canvas.fill((bx + col * size, by + row * size, size - 1, size - 1), COLORS[self.piece + 1])
+        px = bx + 10 * size + 10
+        for i, text in enumerate(('Score %d' % self.score, 'Lines %d' % self.lines, 'Next',
+                                  '', '', 'Arrows/WASD', 'Up: rotate', 'Space: drop', 'Enter: pause', 'R: new')):
+            canvas.text(px, by + i * 12, text[:max(0, (x + w - px - 2) // 8)])
+        mask = SHAPES[self.next_piece][0]
+        for i in range(16):
+            if mask & (0x8000 >> i):
+                canvas.fill((px + i % 4 * 6, by + 36 + i // 4 * 6, 5, 5), COLORS[self.next_piece + 1])
+        self.draw_controls(canvas)

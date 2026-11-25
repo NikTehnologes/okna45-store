@@ -1,0 +1,95 @@
+"""Integer Pong: one ball, two paddles, no private pixel buffer."""
+from ok45_api import Application, UP, DOWN, ENTER, LIGHT, BLACK, WHITE, NAVY, GREEN
+
+
+class Main(Application):
+    title = 'Pong Lite'
+    interval_ms = 80
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        self.player, self.ai = 40, 40
+        self.score, self.enemy, self.paused = 0, 0, True
+        self.serve(1)
+
+    def serve(self, direction):
+        self.x, self.y, self.dx, self.dy = 100, 50, direction * 4, 2
+
+    def area(self):
+        x, y, w, h = self.window.client()
+        return x + 4, y + 16, w - 8, h - 44
+
+    def box(self, x, y, w, h):
+        ax, ay, aw, ah = self.area()
+        return (ax + x * aw // 200, ay + y * ah // 100,
+                max(3, w * aw // 200), max(3, h * ah // 100))
+
+    def move(self, amount):
+        self.invalidate(self.box(4, self.player, 4, 20))
+        self.player = max(0, min(80, self.player + amount))
+        self.invalidate(self.box(4, self.player, 4, 20))
+
+    def controls(self):
+        return self.toolbar((('toggle', 'Play' if self.paused else 'Pause'), ('up', 'Up'), ('down', 'Down'), ('new', 'New')))
+
+    def activate(self, control):
+        action = control['action']
+        if action in ('up', 'down'):
+            self.move(-8 if action == 'up' else 8)
+            return
+        if action == 'new':
+            self.score, self.enemy, self.paused = 0, 0, True
+            self.serve(1)
+        else:
+            self.paused = not self.paused
+        self.invalidate()
+
+    def key(self, code):
+        if code in (UP, DOWN, ord('w'), ord('W'), ord('s'), ord('S')):
+            self.move(-8 if code in (UP, ord('w'), ord('W')) else 8)
+        elif code in (ENTER, 32):
+            self.activate({'action': 'toggle'})
+        elif code in (ord('r'), ord('R')):
+            self.activate({'action': 'new'})
+
+    def tick(self):
+        if self.paused:
+            return
+        self.invalidate(self.box(self.x - 2, self.y - 2, 4, 4))
+        self.invalidate(self.box(192, self.ai, 4, 20))
+        self.ai = max(0, min(80, self.ai + max(-2, min(2, self.y - self.ai - 10))))
+        self.x += self.dx
+        self.y += self.dy
+        if self.y < 2 or self.y > 98:
+            self.y = max(2, min(98, self.y))
+            self.dy = -self.dy
+        if self.dx < 0 and 6 <= self.x <= 10 and self.player - 2 <= self.y <= self.player + 22:
+            self.x, self.dx = 10, 4
+            self.dy = max(-4, min(4, (self.y - self.player - 10) // 4)) or 1
+        elif self.dx > 0 and 190 <= self.x <= 194 and self.ai - 2 <= self.y <= self.ai + 22:
+            self.x, self.dx = 190, -4
+        if self.x < 0 or self.x > 200:
+            if self.x < 0:
+                self.enemy += 1
+            else:
+                self.score += 1
+            self.serve(-1 if self.x < 0 else 1)
+            self.invalidate()
+        self.invalidate(self.box(self.x - 2, self.y - 2, 4, 4))
+        self.invalidate(self.box(192, self.ai, 4, 20))
+
+    def semantic(self):
+        return {'score': self.score, 'opponent': self.enemy, 'paused': self.paused,
+                'lines': ['Up/Down or W/S', 'Enter/Space: play/pause', 'R: new game']}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, LIGHT)
+        canvas.text(x + 4, y + 3, '%d : %d%s' % (self.score, self.enemy, ' PAUSED' if self.paused else ''))
+        canvas.fill(self.area(), BLACK)
+        for row in range(0, 100, 10):
+            canvas.fill(self.box(99, row, 1, 4), NAVY)
+        canvas.fill(self.box(4, self.player, 4, 20), GREEN)
+        canvas.fill(self.box(192, self.ai, 4, 20), WHITE)
+        canvas.fill(self.box(self.x - 2, self.y - 2, 4, 4), WHITE)
+        self.draw_controls(canvas)

@@ -1,0 +1,254 @@
+"""Bounded API-v1 AI chat. No network on open and no automatic provider fallback."""
+import gc
+import ok45_fs as fs
+from ok45_api import Application, ENTER, UP, DOWN, BACKSPACE, DELETE, LIGHT, WHITE, BLACK, NAVY
+
+URLS = ('https://api.llm7.io/v1/chat/completions', 'https://text.pollinations.ai/')
+NAMES = ('LLM7', 'Pollinations')
+RUS = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+LAT = ('a', 'b', 'v', 'g', 'd', 'e', 'yo', 'zh', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o',
+       'p', 'r', 's', 't', 'u', 'f', 'kh', 'ts', 'ch', 'sh', 'sch', '', 'y', '', 'e', 'yu', 'ya')
+
+
+def screen(text):
+    out = []
+    for ch in text:
+        code = ord(ch)
+        upper = 1040 <= code <= 1071 or code == 1025
+        lower = 1105 if code == 1025 else code + 32 if upper else code
+        if 1072 <= lower <= 1103 or lower == 1105:
+            part = LAT[RUS.find(chr(lower))]
+            out.append(part.upper() if upper else part)
+        elif ch == '\n' or 32 <= code <= 126:
+            out.append(ch)
+        elif ch == '\t':
+            out.append(' ')
+        elif ch != '\r':
+            out.append('?')
+    return ''.join(out)
+
+
+def cut(text, limit=512):
+    size = 0
+    for index, ch in enumerate(text):
+        code = ord(ch)
+        if 0xd800 <= code <= 0xdfff:
+            raise ValueError('Invalid Unicode in reply')
+        size += 1 if code < 128 else 2 if code < 2048 else 3 if code < 65536 else 4
+        if size > limit:
+            size -= 1 if code < 128 else 2 if code < 2048 else 3 if code < 65536 else 4
+            while index and size > limit - 6:
+                index -= 1
+                code = ord(text[index])
+                size -= 1 if code < 128 else 2 if code < 2048 else 3 if code < 65536 else 4
+            return text[:index] + ' [cut]'
+    return text
+
+
+def trim(messages):
+    while len(messages) > 6 or sum(len(m['content'].encode('utf-8')) for m in messages) > 2048:
+        del messages[0]
+
+
+class Main(Application):
+    title = 'AI Chat Lite'
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        value = context.load_json(default={'provider': 0, 'draft': '', 'messages': []})
+        if (not isinstance(value, dict) or type(value.get('provider')) is not int or
+                value['provider'] not in (0, 1) or not isinstance(value.get('draft'), str) or
+                len(value['draft']) > 160 or any(not 32 <= ord(c) <= 126 for c in value['draft'])):
+            raise ValueError('Invalid AI settings; original file kept')
+        messages = value.get('messages')
+        if (not isinstance(messages, list) or len(messages) > 6 or
+                any(not isinstance(m, dict) or m.get('role') not in ('user', 'assistant') or
+                    not isinstance(m.get('content'), str) or not m['content'] or
+                    len(m['content'].encode('utf-8')) > 512 for m in messages) or
+                sum(len(m['content'].encode('utf-8')) for m in messages) > 2048):
+            raise ValueError('Invalid AI history; original file kept')
+        self.provider, self.draft, self.messages = value['provider'], value['draft'], messages
+        self.busy, self.dirty, self.task, self.confirm = False, False, None, False
+        self.status = 'Send uses selected third-party service'
+        self.lines, self.scroll = [], 0
+        self.rebuild()
+
+    def rows(self):
+        return max(1, (self.window.client()[3] - 76) // 10)
+
+    def rebuild(self):
+        cols = max(1, (self.window.client()[2] - 32) // 8)
+        rows = []
+        for message in self.messages:
+            text = ('You: ' if message['role'] == 'user' else 'AI: ') + screen(message['content'])
+            for line in text.split('\n'):
+                for start in range(0, max(1, len(line)), cols):
+                    rows.append(line[start:start + cols])
+        self.lines = rows
+        self.scroll = max(0, len(rows) - self.rows())
+        self.invalidate()
+
+    def save(self):
+        try:
+            fs.atomic_json(self.context.data_path(), {'provider': self.provider, 'draft': self.draft,
+                           'messages': self.messages}, 8192)
+            self.dirty = False
+            return True
+        except Exception as error:
+            self.status = 'Save: ' + str(error)[:64]
+            self.invalidate()
+            return False
+
+    def controls(self):
+        if self.confirm:
+            return self.toolbar((('keep', 'Keep'), ('clear_yes', 'Clear history')))
+        x, y, w, h = self.window.client()
+        items = self.toolbar((('send', 'Send'), ('provider', NAMES[self.provider]), ('save', 'Save'),
+                              ('stop', 'Stop') if self.busy else ('clear', 'Clear')))
+        for item in items:
+            if item['action'] in ('send', 'provider', 'clear'):
+                item['enabled'] = not self.busy
+        items.append({'action': 'input', 'button': False, 'rect': [x + 3, y + h - 42, w - 6, 18]})
+        for index, action in enumerate(('prev', 'next')):
+            items.append({'action': action, 'label': '^' if index == 0 else 'v',
+                          'rect': [x + w - 21, y + 18 + index * 22, 18, 18]})
+        return items
+
+    def activate(self, control):
+        action = control['action']
+        if action in ('prev', 'next'):
+            self.scroll = max(0, min(max(0, len(self.lines) - self.rows()),
+                                    self.scroll + (-1 if action == 'prev' else 1)))
+        elif action == 'input':
+            self.context.input()
+        elif action == 'send' and not self.busy and self.draft.strip():
+            if fs._operation is not None:
+                self.status = 'Network/package operation busy; try later'
+            else:
+                self.busy, self.status = True, 'Connecting to ' + NAMES[self.provider]
+                try:
+                    self.task = self.context.spawn('ai-request', self.request_job(self.draft.strip()))
+                except Exception as error:
+                    self.busy, self.status = False, str(error)[:80]
+        elif action == 'stop':
+            if self.task is not None:
+                self.context.cancel(self.task)
+            self.busy, self.task, self.status = False, None, 'Stopped; draft kept'
+        elif action == 'provider' and not self.busy:
+            self.provider, self.dirty = 1 - self.provider, True
+            self.status = 'Next Send uses ' + NAMES[self.provider]
+        elif action == 'save':
+            if self.save():
+                self.status = 'Saved locally; nothing sent'
+        elif action == 'clear' and not self.busy:
+            self.confirm = True
+        elif action in ('keep', 'clear_yes'):
+            if action == 'clear_yes':
+                self.messages, self.dirty = [], True
+                self.rebuild()
+                self.save()
+            self.confirm = False
+        self.invalidate()
+
+    def request_job(self, prompt):
+        response = None
+        acquired = False
+        owner = 'ai-%d' % self.window.id
+        path = self.context.data_path('reply.part')
+        try:
+            fs.acquire(owner)
+            acquired = True
+            yield None
+            gc.collect()
+            if hasattr(gc, 'mem_free') and gc.mem_free() < 48000:
+                raise MemoryError('Low heap; close other windows')
+            import urequests
+            gc.collect()
+            messages = self.messages[-5:] + [{'role': 'user', 'content': prompt}]
+            trim(messages)
+            packet = {'messages': messages, 'stream': False, 'max_tokens': 160}
+            if self.provider == 0:
+                packet['model'] = 'gpt-oss:20b'
+            response = urequests.post(URLS[self.provider], json=packet, timeout=10, stream=True)
+            packet, messages = None, None
+            if response.status_code != 200:
+                raise OSError('HTTP %d; no automatic fallback' % response.status_code)
+            if not callable(getattr(getattr(response, 'raw', None), 'read', None)):
+                raise RuntimeError('urequests needs stream=True, raw and timeout')
+            yield from fs.receive_job(response.raw, path, 8192)
+            response.close()
+            response = None
+            gc.collect()
+            if self.provider == 0:
+                value = fs.load_json(path, 8192)
+                choices = value.get('choices') if isinstance(value, dict) else None
+                if not isinstance(choices, list) or not choices or not isinstance(choices[0], dict):
+                    raise ValueError('Invalid AI choices')
+                message = choices[0].get('message')
+                reply = message.get('content') if isinstance(message, dict) else None
+                if not isinstance(reply, str) or not reply.strip():
+                    raise ValueError('AI reply is empty or invalid')
+            else:
+                reply = fs.read_text(path, 8192)
+                if not reply.strip():
+                    raise ValueError('AI reply is empty')
+            reply = cut(reply)
+            self.messages += [{'role': 'user', 'content': prompt}, {'role': 'assistant', 'content': reply}]
+            trim(self.messages)
+            self.draft, self.dirty = '', True
+            self.status = 'Reply received; UTF-8 saved, RU translit'
+            self.rebuild()
+            self.save()
+        except Exception as error:
+            self.status = str(error)[:96]
+        finally:
+            try:
+                if response is not None:
+                    response.close()
+            finally:
+                try:
+                    fs.remove(path)
+                finally:
+                    if acquired:
+                        fs.release(owner)
+                    self.busy, self.task = False, None
+                    self.invalidate()
+
+    def key(self, code):
+        if self.confirm:
+            return
+        if code in (UP, DOWN):
+            self.activate({'action': 'prev' if code == UP else 'next'})
+        elif code == ENTER:
+            self.activate({'action': 'send'})
+        elif not self.busy and code in (BACKSPACE, DELETE):
+            self.draft, self.dirty = self.draft[:-1], True
+        elif not self.busy and 32 <= code <= 126 and len(self.draft) < 160:
+            self.draft, self.dirty = self.draft + chr(code), True
+        self.invalidate()
+
+    def close(self):
+        if self.busy:
+            self.activate({'action': 'stop'})
+        return not self.dirty or self.save()
+
+    def semantic(self):
+        return {'provider': NAMES[self.provider], 'busy': self.busy, 'messages': len(self.messages),
+                'draft_chars': len(self.draft), 'dirty': self.dirty, 'status': self.status,
+                'lines': self.lines[self.scroll:self.scroll + self.rows()]}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, LIGHT)
+        cols = max(1, (w - 8) // 8)
+        if self.confirm:
+            canvas.text(x + 4, y + 8, 'Clear saved AI history?'[:cols])
+            canvas.text(x + 4, y + 22, 'Draft will be kept.'[:cols])
+        else:
+            canvas.text(x + 4, y + 3, (NAMES[self.provider] + ' / last 6 messages')[:cols])
+            for row in range(min(self.rows(), len(self.lines) - self.scroll)):
+                canvas.text(x + 4, y + 18 + row * 10, self.lines[self.scroll + row], NAVY)
+            canvas.text(x + 4, y + h - 55, screen(self.status)[:cols])
+            canvas.fill((x + 3, y + h - 42, w - 6, 18), WHITE)
+            canvas.text(x + 5, y + h - 37, ((self.draft + '_') or 'Type / Send')[-max(1, (w - 12) // 8):], BLACK)
+        self.draw_controls(canvas)

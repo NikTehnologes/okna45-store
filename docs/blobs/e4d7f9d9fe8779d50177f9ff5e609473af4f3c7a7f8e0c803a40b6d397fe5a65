@@ -1,0 +1,139 @@
+"""Integer Snake after the main apps: 20x14 cells, fixed 560-byte body array."""
+from array import array
+from ok45_api import Application, LEFT, RIGHT, UP, DOWN, ENTER, ticks_ms
+from ok45_api import LIGHT, WHITE, BLACK, NAVY, GREEN
+
+COLS, ROWS = 20, 14
+CELLS = COLS * ROWS
+
+
+class Main(Application):
+    title = 'Snake Lite'
+    interval_ms = 160
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        self.body = array('H', [0]) * CELLS
+        self.seed = ticks_ms() & 65535
+        self.reset()
+
+    def reset(self):
+        self.tail, self.length = 0, 3
+        self.body[0], self.body[1], self.body[2] = 148, 149, 150
+        self.direction, self.pending = RIGHT, RIGHT
+        self.score, self.over, self.won, self.paused = 0, False, False, True
+        self.food = self.place_food()
+        self.invalidate()
+
+    def occupied(self, cell, skip_tail=False):
+        for index in range(1 if skip_tail else 0, self.length):
+            if self.body[(self.tail + index) % CELLS] == cell:
+                return True
+        return False
+
+    def place_food(self):
+        self.seed = (self.seed * 109 + 1021) & 65535
+        start = self.seed % CELLS
+        for offset in range(CELLS):
+            cell = (start + offset) % CELLS
+            if not self.occupied(cell):
+                return cell
+        return -1
+
+    def area(self):
+        x, y, w, h = self.window.client()
+        size = max(1, min((w - 8) // COLS, (h - 42) // ROWS))
+        return x + (w - COLS * size) // 2, y + 16, size
+
+    def cell_rect(self, cell):
+        x, y, size = self.area()
+        return x + cell % COLS * size, y + cell // COLS * size, size, size
+
+    def steer(self, direction):
+        opposite = ((LEFT, RIGHT), (UP, DOWN))
+        if (direction != self.direction and
+                any(self.direction in pair and direction in pair for pair in opposite)):
+            return
+        self.pending = direction
+
+    def controls(self):
+        return self.toolbar((('left', '<'), ('up', '^'), ('down', 'v'), ('right', '>'),
+                             ('pause', 'Play' if self.paused else 'Pause'), ('new', 'New')))
+
+    def activate(self, control):
+        action = control['action']
+        if action == 'new':
+            self.reset()
+        elif action == 'pause':
+            if self.over:
+                self.reset()
+            self.paused = not self.paused
+            self.invalidate()
+        elif action in ('left', 'right', 'up', 'down'):
+            self.steer({'left': LEFT, 'right': RIGHT, 'up': UP, 'down': DOWN}[action])
+
+    def key(self, code):
+        if 65 <= code <= 90:
+            code += 32
+        mapping = {97: LEFT, 100: RIGHT, 119: UP, 115: DOWN}
+        direction = mapping.get(code, code)
+        if direction in (LEFT, RIGHT, UP, DOWN):
+            self.steer(direction)
+        elif code in (ENTER, 32, 112):
+            self.activate({'action': 'pause'})
+        elif code == 114:
+            self.reset()
+
+    def tick(self):
+        if self.paused or self.over:
+            return
+        head = self.body[(self.tail + self.length - 1) % CELLS]
+        self.direction = self.pending
+        col, row = head % COLS, head // COLS
+        col += -1 if self.direction == LEFT else 1 if self.direction == RIGHT else 0
+        row += -1 if self.direction == UP else 1 if self.direction == DOWN else 0
+        cell = row * COLS + col
+        grow = cell == self.food
+        if not 0 <= col < COLS or not 0 <= row < ROWS or self.occupied(cell, not grow):
+            self.over, self.paused = True, True
+            self.invalidate()
+            return
+        self.invalidate(self.cell_rect(head))
+        if grow:
+            self.body[(self.tail + self.length) % CELLS] = cell
+            self.length, self.score = self.length + 1, self.score + 1
+            if self.length == CELLS:
+                self.won, self.over, self.paused, self.food = True, True, True, -1
+            else:
+                self.food = self.place_food()
+            self.invalidate()
+        else:
+            old = self.body[self.tail]
+            self.invalidate(self.cell_rect(old))
+            self.tail = (self.tail + 1) % CELLS
+            self.body[(self.tail + self.length - 1) % CELLS] = cell
+            self.invalidate(self.cell_rect(cell))
+
+    def semantic(self):
+        return {'score': self.score, 'length': self.length, 'paused': self.paused,
+                'over': self.over, 'won': self.won, 'body_bytes': CELLS * 2,
+                'lines': ['Arrows/WASD: turn', 'Enter/Space/P: pause', 'R: new game']}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, LIGHT)
+        status = 'WIN' if self.won else 'OVER' if self.over else 'PAUSED' if self.paused else ''
+        canvas.text(x + 4, y + 3, ('Snake %d %s' % (self.score, status))[:max(1, (w - 8) // 8)])
+        bx, by, size = self.area()
+        canvas.fill((bx, by, COLS * size, ROWS * size), BLACK)
+        if self.food >= 0:
+            canvas.fill(self.cell_rect(self.food), WHITE)
+        if canvas.clip:
+            top, bottom = canvas.clip[1], canvas.clip[1] + canvas.clip[3]
+            for index in range(self.length):
+                cell = self.body[(self.tail + index) % CELLS]
+                cx, cy, cw, ch = self.cell_rect(cell)
+                if cy < bottom and cy + ch > top:
+                    canvas.fill((cx, cy, max(1, cw - 1), max(1, ch - 1)),
+                                NAVY if index == self.length - 1 else GREEN)
+        self.draw_controls(canvas)

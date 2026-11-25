@@ -1,0 +1,85 @@
+"""Tiny vector Flappy: integer physics and one recycled pipe pair."""
+from ok45_api import Application, ENTER, UP, ticks_ms, LIGHT, WHITE, NAVY, GREEN
+
+
+class Main(Application):
+    title = 'Flappy Lite'
+    interval_ms = 80
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        self.seed = ticks_ms() & 65535
+        self.reset()
+
+    def reset(self):
+        self.y, self.velocity, self.pipe, self.gap = 45, 0, 180, 28
+        self.score, self.paused, self.over = 0, True, False
+
+    def area(self):
+        x, y, w, h = self.window.client()
+        return x + 4, y + 16, w - 8, h - 44
+
+    def box(self, x, y, w, h):
+        ax, ay, aw, ah = self.area()
+        return (ax + x * aw // 200, ay + y * ah // 100,
+                max(3, w * aw // 200), max(3, h * ah // 100))
+
+    def controls(self):
+        return self.toolbar((('flap', 'Flap'), ('pause', 'Play' if self.paused else 'Pause'), ('new', 'New')))
+
+    def activate(self, control):
+        action = control['action']
+        if action == 'new':
+            self.reset()
+        elif action == 'flap':
+            if self.over:
+                self.reset()
+            self.velocity, self.paused = -5, False
+        elif not self.over:
+            self.paused = not self.paused
+        self.invalidate()
+
+    def key(self, code):
+        if code in (ENTER, 32, UP):
+            self.activate({'action': 'flap'})
+        elif code in (ord('p'), ord('P')):
+            self.activate({'action': 'pause'})
+        elif code in (ord('r'), ord('R')):
+            self.activate({'action': 'new'})
+
+    def tick(self):
+        if self.paused or self.over:
+            return
+        self.invalidate(self.box(44, self.y, 6, 6))
+        self.invalidate(self.box(self.pipe - 4, 0, 18, 100))
+        before = self.pipe
+        self.pipe -= 4
+        self.velocity = min(6, self.velocity + 1)
+        self.y += self.velocity
+        if self.y < 0 or self.y + 6 > 100 or (self.pipe < 50 and self.pipe + 14 > 44 and
+                (self.y < self.gap or self.y + 6 > self.gap + 38)):
+            self.over, self.paused = True, True
+            self.invalidate()
+        elif before + 14 >= 44 and self.pipe + 14 < 44:
+            self.score += 1
+            x, y, w, h = self.window.client()
+            self.invalidate((x, y, w, 14))
+        if self.pipe < -14:
+            self.seed = (self.seed * 109 + 1021) & 65535
+            self.pipe, self.gap = 200, 10 + self.seed % 43
+        self.invalidate(self.box(self.pipe, 0, 14, 100))
+        self.invalidate(self.box(44, self.y, 6, 6))
+
+    def semantic(self):
+        return {'score': self.score, 'paused': self.paused, 'over': self.over,
+                'lines': ['Space/Enter/Up: flap', 'P: pause, R: new']}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, LIGHT)
+        canvas.text(x + 4, y + 3, 'Score %d %s' % (self.score, 'OVER' if self.over else 'PAUSED' if self.paused else ''))
+        canvas.fill(self.area(), NAVY)
+        canvas.fill(self.box(self.pipe, 0, 14, self.gap), GREEN)
+        canvas.fill(self.box(self.pipe, self.gap + 38, 14, 62 - self.gap), GREEN)
+        canvas.fill(self.box(44, self.y, 6, 6), WHITE)
+        self.draw_controls(canvas)

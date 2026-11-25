@@ -1,0 +1,48 @@
+"""Cooperative stopwatch; no private framebuffer or blocking timing loop."""
+from ok45_api import Application, ticks_ms, ticks_diff
+
+
+class Main(Application):
+    title = 'Stopwatch'
+    interval_ms = 100
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        self.elapsed, self.previous, self.running = 0, ticks_ms(), False
+        self.shown = ''
+
+    def tick(self):
+        now = ticks_ms()
+        if self.running:
+            self.elapsed += max(0, ticks_diff(now, self.previous))
+        self.previous = now
+        value = self.label()
+        if value != self.shown:
+            self.shown = value
+            self.invalidate()
+
+    def label(self):
+        tenths = self.elapsed // 100
+        return '%02d:%02d.%d' % (tenths // 600, (tenths // 10) % 60, tenths % 10)
+
+    def key(self, code):
+        if code == 32:
+            self.activate({'action': 'toggle'})
+        elif code in (ord('r'), ord('R')):
+            self.activate({'action': 'reset'})
+
+    def controls(self):
+        return self.toolbar((('toggle', 'Pause' if self.running else 'Start'), ('reset', 'Reset')))
+
+    def activate(self, control):
+        self.tick()
+        if control['action'] == 'toggle':
+            self.running = not self.running
+        else:
+            self.elapsed, self.running = 0, False
+        self.previous = ticks_ms()
+        self.invalidate()
+
+    def semantic(self):
+        return {'elapsed_ms': self.elapsed, 'running': self.running,
+                'lines': ['Stopwatch', self.label(), 'Space: start / pause', 'R: reset', 'Keeps running behind windows']}

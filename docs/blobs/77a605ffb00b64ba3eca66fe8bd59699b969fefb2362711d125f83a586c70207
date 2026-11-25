@@ -1,0 +1,56 @@
+"""Small one-operation calculator. No eval, imports or Python execution of input."""
+from ok45_api import Application, ENTER, BACKSPACE, DELETE, WHITE, BLACK, SILVER
+
+
+class Main(Application):
+    title = 'Calculator'
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        self.value, self.status = '', 'Example: -12.5*3'
+
+    def key(self, code):
+        if code in (BACKSPACE, DELETE):
+            self.value = self.value[:-1]
+        elif code in (ENTER, 10, ord('=')):
+            try:
+                split = next((i for i in range(1, len(self.value)) if self.value[i] in '+-*/'), None)
+                if split is None:
+                    result = float(self.value)
+                else:
+                    a, b = float(self.value[:split]), float(self.value[split + 1:])
+                    operator = self.value[split]
+                    result = a + b if operator == '+' else a - b if operator == '-' else a * b if operator == '*' else a / b
+                self.value = ('%.6f' % result).rstrip('0').rstrip('.')
+                self.status = 'Result; C clears'
+            except (ValueError, ZeroDivisionError, OverflowError):
+                self.status = 'Use two numbers and + - * /'
+        elif code in (ord('c'), ord('C')):
+            self.value, self.status = '', 'Cleared'
+        elif code in tuple(ord(ch) for ch in '0123456789.+-*/') and len(self.value) < 28:
+            self.value += chr(code)
+        self.invalidate()
+
+    def controls(self):
+        x, y, w, h = self.window.client()
+        keys = ('7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '=', '+')
+        width, height = (w - 10) // 4, max(18, (h - 63) // 4)
+        controls = [{'action': key, 'label': key,
+                     'rect': [x + 2 + (i % 4) * (width + 2), y + 37 + (i // 4) * height, width, height - 2]}
+                    for i, key in enumerate(keys)]
+        controls.extend(self.toolbar((('C', 'Clear'), ('back', '<-'))))
+        return controls
+
+    def activate(self, control):
+        self.key(BACKSPACE if control['action'] == 'back' else ord(control['action']))
+
+    def semantic(self):
+        return {'value': self.value, 'status': self.status, 'lines': [self.value, self.status]}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, SILVER)
+        canvas.fill((x + 2, y + 2, w - 4, 18), WHITE)
+        canvas.text(x + 5, y + 7, (self.value or '0')[-max(1, (w - 10) // 8):], BLACK)
+        canvas.text(x + 4, y + 24, self.status[:max(1, (w - 8) // 8)])
+        self.draw_controls(canvas)

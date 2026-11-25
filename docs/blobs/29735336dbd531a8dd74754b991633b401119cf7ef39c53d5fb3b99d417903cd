@@ -1,0 +1,164 @@
+"""9x9 Minesweeper: safe first opening and a bounded iterative flood queue."""
+from ok45_api import Application, LEFT, RIGHT, UP, DOWN, ENTER, ticks_ms, contains, LIGHT, WHITE, BLACK, NAVY, SILVER
+
+
+class Main(Application):
+    title = 'Mines Lite'
+
+    def __init__(self, context, window):
+        super().__init__(context, window)
+        self.seed = ticks_ms() & 65535
+        self.board, self.view, self.queue = bytearray(81), bytearray(81), bytearray(81)
+        self.flag_mode = False
+        self.reset()
+
+    def reset(self):
+        for i in range(81):
+            self.board[i], self.view[i] = 0, 0
+        self.ready, self.over, self.won = False, False, False
+        self.selected, self.opened, self.flags = 40, 0, 0
+
+    def neighbours(self, index):
+        x, y = index % 9, index // 9
+        for row in range(max(0, y - 1), min(9, y + 2)):
+            for col in range(max(0, x - 1), min(9, x + 2)):
+                other = row * 9 + col
+                if other != index:
+                    yield other
+
+    def generate(self, first):
+        count = 0
+        for index in range(81):
+            if abs(index % 9 - first % 9) > 1 or abs(index // 9 - first // 9) > 1:
+                self.queue[count] = index
+                count += 1
+        for i in range(10):
+            self.seed = (self.seed * 109 + 1021) & 65535
+            chosen = i + self.seed % (count - i)
+            index = self.queue[chosen]
+            self.queue[chosen] = self.queue[i]
+            self.board[index] = 9
+        for index in range(81):
+            if self.board[index] != 9:
+                self.board[index] = sum(self.board[n] == 9 for n in self.neighbours(index))
+        self.ready = True
+
+    def reveal(self, index):
+        if self.over or self.view[index]:
+            return
+        if not self.ready:
+            self.generate(index)
+        self.view[index] = 1
+        if self.board[index] == 9:
+            self.over = True
+        else:
+            self.queue[0], head, tail = index, 0, 1
+            self.opened += 1
+            while head < tail:
+                current = self.queue[head]
+                head += 1
+                if self.board[current] == 0:
+                    for other in self.neighbours(current):
+                        if not self.view[other] and self.board[other] != 9:
+                            self.view[other] = 1
+                            self.opened += 1
+                            self.queue[tail] = other
+                            tail += 1
+            if self.opened == 71:
+                self.won, self.over = True, True
+        self.invalidate()
+
+    def flag(self):
+        if self.over or self.view[self.selected] == 1:
+            return
+        marked = self.view[self.selected] == 2
+        self.view[self.selected] = 0 if marked else 2
+        self.flags += -1 if marked else 1
+        self.invalidate(self.cell_rect(self.selected))
+        x, y, w, h = self.window.client()
+        self.invalidate((x, y, w, 14))
+
+    def layout(self):
+        x, y, w, h = self.window.client()
+        size = min((w - 8) // 9, (h - 42) // 9)
+        return x + (w - size * 9) // 2, y + 16, size
+
+    def cell_rect(self, index):
+        bx, by, size = self.layout()
+        return bx + index % 9 * size, by + index // 9 * size, size, size
+
+    def controls(self):
+        return self.toolbar((('mode', 'Flags' if self.flag_mode else 'Cells'), ('open', 'Open'), ('flag', 'Mark'), ('new', 'New')))
+
+    def click(self, x, y):
+        if super().click(x, y):
+            return True
+        bx, by, size = self.layout()
+        if contains((bx, by, size * 9, size * 9), x, y):
+            self.activate({'action': 'cell', 'index': (y - by) // size * 9 + (x - bx) // size})
+            return True
+        return False
+
+    def activate(self, control):
+        action = control['action']
+        if action == 'cell':
+            self.invalidate(self.cell_rect(self.selected))
+            self.selected = control['index']
+            self.invalidate(self.cell_rect(self.selected))
+            self.flag() if self.flag_mode else self.reveal(self.selected)
+        elif action == 'flag':
+            self.flag()
+        elif action == 'open':
+            self.reveal(self.selected)
+        elif action == 'mode':
+            self.flag_mode = not self.flag_mode
+            self.invalidate()
+        elif action == 'new':
+            self.reset()
+            self.invalidate()
+
+    def key(self, code):
+        if code in (LEFT, RIGHT, UP, DOWN):
+            self.invalidate(self.cell_rect(self.selected))
+            x, y = self.selected % 9, self.selected // 9
+            x = max(0, min(8, x + (-1 if code == LEFT else 1 if code == RIGHT else 0)))
+            y = max(0, min(8, y + (-1 if code == UP else 1 if code == DOWN else 0)))
+            self.selected = y * 9 + x
+            self.invalidate(self.cell_rect(self.selected))
+        elif code == ENTER:
+            self.reveal(self.selected)
+        elif code in (32, ord('f'), ord('F')):
+            self.flag()
+        elif code in (ord('r'), ord('R')):
+            self.activate({'action': 'new'})
+
+    def semantic(self):
+        return {'opened': self.opened, 'flags': self.flags, 'won': self.won, 'over': self.over,
+                'selected': self.selected, 'state_bytes': len(self.board) + len(self.view) + len(self.queue),
+                'lines': ['Arrows + Enter: open', 'F/Space: flag', 'R: new game']}
+
+    def draw(self, canvas, rect):
+        x, y, w, h = rect
+        canvas.fill(rect, LIGHT)
+        canvas.text(x + 4, y + 3, 'Flags %d/10 %s' % (self.flags, 'WIN' if self.won else 'BOOM' if self.over else ''))
+        bx, by, size = self.layout()
+        if canvas.clip:
+            first = max(0, (canvas.clip[1] - by) // size)
+            last = min(9, (canvas.clip[1] + canvas.clip[3] - by + size - 1) // size)
+            for row in range(first, last):
+                for col in range(9):
+                    index = row * 9 + col
+                    cell = self.cell_rect(index)
+                    shown = self.view[index] == 1 or self.over and self.board[index] == 9
+                    canvas.fill(cell, WHITE if shown else SILVER)
+                    canvas.bevel(cell, not shown)
+                    label = '*' if self.over and self.board[index] == 9 else 'F' if self.view[index] == 2 else (
+                            str(self.board[index]) if shown and self.board[index] else '')
+                    canvas.text(cell[0] + (size - 8) // 2, cell[1] + (size - 8) // 2, label)
+                    if index == self.selected:
+                        cx, cy, cw, ch = cell
+                        canvas.fill((cx, cy, cw, 1), NAVY)
+                        canvas.fill((cx, cy, 1, ch), NAVY)
+                        canvas.fill((cx, cy + ch - 1, cw, 1), NAVY)
+                        canvas.fill((cx + cw - 1, cy, 1, ch), NAVY)
+        self.draw_controls(canvas)
