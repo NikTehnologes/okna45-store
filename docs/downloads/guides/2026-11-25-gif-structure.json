@@ -1,0 +1,4719 @@
+{
+  "original": {
+    "file": "LoadAnimation_ORIG.gif",
+    "size": 521335,
+    "sha256": "54b9d97e4a907a0e45233f15a7357e72420c9ff2502b21468a7c00be027fe2f3",
+    "dimensions": [
+      320,
+      240
+    ],
+    "stored_frames": 97,
+    "duration_ms": 1940,
+    "global_colors": 256,
+    "color_table_bytes": 69120,
+    "lzw_bytes": 448355,
+    "encoded_pixels": 7449600,
+    "full_screen_frames": 97,
+    "local_table_frames": 89,
+    "transparent_frames": 0,
+    "disposal_counts": {
+      "2": 97
+    },
+    "delay_counts_ms": {
+      "20": 97
+    },
+    "extensions": [
+      {
+        "label": 254,
+        "bytes": 40
+      },
+      {
+        "label": 255,
+        "bytes": 14
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      }
+    ],
+    "frames": [
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4610
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4618
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4610
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4610
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4612
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4616
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4607
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4607
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4634
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4636
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4636
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4616
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4618
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4618
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4618
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4616
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4616
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4628
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4628
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4628
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4628
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4621
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4621
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4624
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4622
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4628
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4628
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4628
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4631
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4631
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4630
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4627
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4625
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4616
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4619
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4612
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4612
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4612
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 256,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4613
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 2,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4610
+      }
+    ]
+  },
+  "optimized": {
+    "file": "LoadAnimation.gif",
+    "size": 16658,
+    "sha256": "692929a884d6e06952f461200e4632f47c7d6ecd542003343b15516771a093b6",
+    "dimensions": [
+      320,
+      240
+    ],
+    "stored_frames": 96,
+    "duration_ms": 1940,
+    "global_colors": 256,
+    "color_table_bytes": 2112,
+    "lzw_bytes": 12412,
+    "encoded_pixels": 221139,
+    "full_screen_frames": 1,
+    "local_table_frames": 6,
+    "transparent_frames": 95,
+    "disposal_counts": {
+      "1": 96
+    },
+    "delay_counts_ms": {
+      "20": 95,
+      "40": 1
+    },
+    "extensions": [
+      {
+        "label": 254,
+        "bytes": 46
+      },
+      {
+        "label": 255,
+        "bytes": 14
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      },
+      {
+        "label": 249,
+        "bytes": 4
+      }
+    ],
+    "frames": [
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": false,
+        "transparent_index": 255,
+        "rect": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 4105
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 21,
+        "rect": [
+          112,
+          70,
+          96,
+          94
+        ],
+        "local_colors": 32,
+        "interlaced": false,
+        "lzw_minimum_bits": 5,
+        "lzw_bytes": 307
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          111,
+          156,
+          96,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 57
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 19,
+        "rect": [
+          112,
+          70,
+          96,
+          94
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 5,
+        "lzw_bytes": 305
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          111,
+          156,
+          96,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 60
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          112,
+          156,
+          96,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 60
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 3,
+        "rect": [
+          111,
+          156,
+          97,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 5,
+        "lzw_bytes": 72
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 40,
+        "rect": [
+          85,
+          48,
+          147,
+          116
+        ],
+        "local_colors": 64,
+        "interlaced": false,
+        "lzw_minimum_bits": 6,
+        "lzw_bytes": 564
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 3,
+        "rect": [
+          111,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 5,
+        "lzw_bytes": 34
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 107,
+        "rect": [
+          85,
+          46,
+          148,
+          118
+        ],
+        "local_colors": 128,
+        "interlaced": false,
+        "lzw_minimum_bits": 7,
+        "lzw_bytes": 1352
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          113,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          114,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 103,
+        "rect": [
+          85,
+          46,
+          148,
+          118
+        ],
+        "local_colors": 128,
+        "interlaced": false,
+        "lzw_minimum_bits": 7,
+        "lzw_bytes": 1337
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          116,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          117,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          118,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          119,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          120,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          121,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          122,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          123,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          124,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          125,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          126,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          127,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          128,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          129,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          130,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          131,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          132,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          133,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          134,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          135,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          136,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          137,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          138,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          139,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          140,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          141,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          142,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          143,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          144,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          145,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          146,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          147,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          148,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          149,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 40,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          150,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          151,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          152,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          153,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          154,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          155,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          156,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          157,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          158,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          159,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          160,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          161,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          162,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          163,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          164,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          165,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          166,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          167,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          168,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          169,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          170,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          171,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          172,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          173,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          174,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          175,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          176,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          177,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          178,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          179,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          180,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          181,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          182,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          183,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          184,
+          156,
+          16,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 30
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          186,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          187,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          188,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 5,
+        "rect": [
+          120,
+          75,
+          84,
+          89
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 5,
+        "lzw_bytes": 188
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          190,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          191,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          192,
+          156,
+          15,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 27
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 45,
+        "rect": [
+          85,
+          48,
+          147,
+          116
+        ],
+        "local_colors": 64,
+        "interlaced": false,
+        "lzw_minimum_bits": 6,
+        "lzw_bytes": 576
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          111,
+          75,
+          97,
+          89
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 209
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 19,
+        "rect": [
+          111,
+          70,
+          97,
+          94
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 8,
+        "lzw_bytes": 365
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          111,
+          156,
+          96,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 59
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 22,
+        "rect": [
+          112,
+          70,
+          96,
+          94
+        ],
+        "local_colors": 32,
+        "interlaced": false,
+        "lzw_minimum_bits": 5,
+        "lzw_bytes": 311
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 4,
+        "rect": [
+          111,
+          156,
+          96,
+          8
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 2,
+        "lzw_bytes": 59
+      },
+      {
+        "delay_ms": 20,
+        "disposal": 1,
+        "transparent": true,
+        "transparent_index": 19,
+        "rect": [
+          112,
+          70,
+          96,
+          94
+        ],
+        "local_colors": 0,
+        "interlaced": false,
+        "lzw_minimum_bits": 5,
+        "lzw_bytes": 310
+      }
+    ]
+  },
+  "comparison": {
+    "duration_matches": true,
+    "all_displayed_pixels_identical": false,
+    "original_unique_images": 96,
+    "optimized_unique_images": 96,
+    "intervals": [
+      {
+        "start_ms": 0,
+        "end_ms": 20,
+        "original_frame": 0,
+        "optimized_frame": 0,
+        "changed_pixels": 627,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 20,
+        "end_ms": 40,
+        "original_frame": 1,
+        "optimized_frame": 1,
+        "changed_pixels": 597,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 40,
+        "end_ms": 60,
+        "original_frame": 2,
+        "optimized_frame": 2,
+        "changed_pixels": 597,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 60,
+        "end_ms": 80,
+        "original_frame": 3,
+        "optimized_frame": 3,
+        "changed_pixels": 597,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 80,
+        "end_ms": 100,
+        "original_frame": 4,
+        "optimized_frame": 4,
+        "changed_pixels": 597,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 100,
+        "end_ms": 120,
+        "original_frame": 5,
+        "optimized_frame": 5,
+        "changed_pixels": 597,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 120,
+        "end_ms": 140,
+        "original_frame": 6,
+        "optimized_frame": 6,
+        "changed_pixels": 597,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 140,
+        "end_ms": 160,
+        "original_frame": 7,
+        "optimized_frame": 7,
+        "changed_pixels": 589,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 160,
+        "end_ms": 180,
+        "original_frame": 8,
+        "optimized_frame": 8,
+        "changed_pixels": 589,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 180,
+        "end_ms": 200,
+        "original_frame": 9,
+        "optimized_frame": 9,
+        "changed_pixels": 547,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 200,
+        "end_ms": 220,
+        "original_frame": 10,
+        "optimized_frame": 10,
+        "changed_pixels": 547,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 220,
+        "end_ms": 240,
+        "original_frame": 11,
+        "optimized_frame": 11,
+        "changed_pixels": 547,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 240,
+        "end_ms": 260,
+        "original_frame": 12,
+        "optimized_frame": 12,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 260,
+        "end_ms": 280,
+        "original_frame": 13,
+        "optimized_frame": 13,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 280,
+        "end_ms": 300,
+        "original_frame": 14,
+        "optimized_frame": 14,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 300,
+        "end_ms": 320,
+        "original_frame": 15,
+        "optimized_frame": 15,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 320,
+        "end_ms": 340,
+        "original_frame": 16,
+        "optimized_frame": 16,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 340,
+        "end_ms": 360,
+        "original_frame": 17,
+        "optimized_frame": 17,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 360,
+        "end_ms": 380,
+        "original_frame": 18,
+        "optimized_frame": 18,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 380,
+        "end_ms": 400,
+        "original_frame": 19,
+        "optimized_frame": 19,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 400,
+        "end_ms": 420,
+        "original_frame": 20,
+        "optimized_frame": 20,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 420,
+        "end_ms": 440,
+        "original_frame": 21,
+        "optimized_frame": 21,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 440,
+        "end_ms": 460,
+        "original_frame": 22,
+        "optimized_frame": 22,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 460,
+        "end_ms": 480,
+        "original_frame": 23,
+        "optimized_frame": 23,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 480,
+        "end_ms": 500,
+        "original_frame": 24,
+        "optimized_frame": 24,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 500,
+        "end_ms": 520,
+        "original_frame": 25,
+        "optimized_frame": 25,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 520,
+        "end_ms": 540,
+        "original_frame": 26,
+        "optimized_frame": 26,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 540,
+        "end_ms": 560,
+        "original_frame": 27,
+        "optimized_frame": 27,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 560,
+        "end_ms": 580,
+        "original_frame": 28,
+        "optimized_frame": 28,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 580,
+        "end_ms": 600,
+        "original_frame": 29,
+        "optimized_frame": 29,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 600,
+        "end_ms": 620,
+        "original_frame": 30,
+        "optimized_frame": 30,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 620,
+        "end_ms": 640,
+        "original_frame": 31,
+        "optimized_frame": 31,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 640,
+        "end_ms": 660,
+        "original_frame": 32,
+        "optimized_frame": 32,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 660,
+        "end_ms": 680,
+        "original_frame": 33,
+        "optimized_frame": 33,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 680,
+        "end_ms": 700,
+        "original_frame": 34,
+        "optimized_frame": 34,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 700,
+        "end_ms": 720,
+        "original_frame": 35,
+        "optimized_frame": 35,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 720,
+        "end_ms": 740,
+        "original_frame": 36,
+        "optimized_frame": 36,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 740,
+        "end_ms": 760,
+        "original_frame": 37,
+        "optimized_frame": 37,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 760,
+        "end_ms": 780,
+        "original_frame": 38,
+        "optimized_frame": 38,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 780,
+        "end_ms": 800,
+        "original_frame": 39,
+        "optimized_frame": 39,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 800,
+        "end_ms": 820,
+        "original_frame": 40,
+        "optimized_frame": 40,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 820,
+        "end_ms": 840,
+        "original_frame": 41,
+        "optimized_frame": 41,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 840,
+        "end_ms": 860,
+        "original_frame": 42,
+        "optimized_frame": 42,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 860,
+        "end_ms": 880,
+        "original_frame": 43,
+        "optimized_frame": 43,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 880,
+        "end_ms": 900,
+        "original_frame": 44,
+        "optimized_frame": 44,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 900,
+        "end_ms": 920,
+        "original_frame": 45,
+        "optimized_frame": 45,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 920,
+        "end_ms": 940,
+        "original_frame": 46,
+        "optimized_frame": 46,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 940,
+        "end_ms": 960,
+        "original_frame": 47,
+        "optimized_frame": 47,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 960,
+        "end_ms": 980,
+        "original_frame": 48,
+        "optimized_frame": 47,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 980,
+        "end_ms": 1000,
+        "original_frame": 49,
+        "optimized_frame": 48,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1000,
+        "end_ms": 1020,
+        "original_frame": 50,
+        "optimized_frame": 49,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1020,
+        "end_ms": 1040,
+        "original_frame": 51,
+        "optimized_frame": 50,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1040,
+        "end_ms": 1060,
+        "original_frame": 52,
+        "optimized_frame": 51,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1060,
+        "end_ms": 1080,
+        "original_frame": 53,
+        "optimized_frame": 52,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1080,
+        "end_ms": 1100,
+        "original_frame": 54,
+        "optimized_frame": 53,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1100,
+        "end_ms": 1120,
+        "original_frame": 55,
+        "optimized_frame": 54,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1120,
+        "end_ms": 1140,
+        "original_frame": 56,
+        "optimized_frame": 55,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1140,
+        "end_ms": 1160,
+        "original_frame": 57,
+        "optimized_frame": 56,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1160,
+        "end_ms": 1180,
+        "original_frame": 58,
+        "optimized_frame": 57,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1180,
+        "end_ms": 1200,
+        "original_frame": 59,
+        "optimized_frame": 58,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1200,
+        "end_ms": 1220,
+        "original_frame": 60,
+        "optimized_frame": 59,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1220,
+        "end_ms": 1240,
+        "original_frame": 61,
+        "optimized_frame": 60,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1240,
+        "end_ms": 1260,
+        "original_frame": 62,
+        "optimized_frame": 61,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1260,
+        "end_ms": 1280,
+        "original_frame": 63,
+        "optimized_frame": 62,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1280,
+        "end_ms": 1300,
+        "original_frame": 64,
+        "optimized_frame": 63,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1300,
+        "end_ms": 1320,
+        "original_frame": 65,
+        "optimized_frame": 64,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1320,
+        "end_ms": 1340,
+        "original_frame": 66,
+        "optimized_frame": 65,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1340,
+        "end_ms": 1360,
+        "original_frame": 67,
+        "optimized_frame": 66,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1360,
+        "end_ms": 1380,
+        "original_frame": 68,
+        "optimized_frame": 67,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1380,
+        "end_ms": 1400,
+        "original_frame": 69,
+        "optimized_frame": 68,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1400,
+        "end_ms": 1420,
+        "original_frame": 70,
+        "optimized_frame": 69,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1420,
+        "end_ms": 1440,
+        "original_frame": 71,
+        "optimized_frame": 70,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1440,
+        "end_ms": 1460,
+        "original_frame": 72,
+        "optimized_frame": 71,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1460,
+        "end_ms": 1480,
+        "original_frame": 73,
+        "optimized_frame": 72,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1480,
+        "end_ms": 1500,
+        "original_frame": 74,
+        "optimized_frame": 73,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1500,
+        "end_ms": 1520,
+        "original_frame": 75,
+        "optimized_frame": 74,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1520,
+        "end_ms": 1540,
+        "original_frame": 76,
+        "optimized_frame": 75,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1540,
+        "end_ms": 1560,
+        "original_frame": 77,
+        "optimized_frame": 76,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1560,
+        "end_ms": 1580,
+        "original_frame": 78,
+        "optimized_frame": 77,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1580,
+        "end_ms": 1600,
+        "original_frame": 79,
+        "optimized_frame": 78,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1600,
+        "end_ms": 1620,
+        "original_frame": 80,
+        "optimized_frame": 79,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1620,
+        "end_ms": 1640,
+        "original_frame": 81,
+        "optimized_frame": 80,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1640,
+        "end_ms": 1660,
+        "original_frame": 82,
+        "optimized_frame": 81,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1660,
+        "end_ms": 1680,
+        "original_frame": 83,
+        "optimized_frame": 82,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1680,
+        "end_ms": 1700,
+        "original_frame": 84,
+        "optimized_frame": 83,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1700,
+        "end_ms": 1720,
+        "original_frame": 85,
+        "optimized_frame": 84,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1720,
+        "end_ms": 1740,
+        "original_frame": 86,
+        "optimized_frame": 85,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1740,
+        "end_ms": 1760,
+        "original_frame": 87,
+        "optimized_frame": 86,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1760,
+        "end_ms": 1780,
+        "original_frame": 88,
+        "optimized_frame": 87,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1780,
+        "end_ms": 1800,
+        "original_frame": 89,
+        "optimized_frame": 88,
+        "changed_pixels": 557,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1800,
+        "end_ms": 1820,
+        "original_frame": 90,
+        "optimized_frame": 89,
+        "changed_pixels": 549,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1820,
+        "end_ms": 1840,
+        "original_frame": 91,
+        "optimized_frame": 90,
+        "changed_pixels": 549,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1840,
+        "end_ms": 1860,
+        "original_frame": 92,
+        "optimized_frame": 91,
+        "changed_pixels": 549,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1860,
+        "end_ms": 1880,
+        "original_frame": 93,
+        "optimized_frame": 92,
+        "changed_pixels": 549,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1880,
+        "end_ms": 1900,
+        "original_frame": 94,
+        "optimized_frame": 93,
+        "changed_pixels": 549,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1900,
+        "end_ms": 1920,
+        "original_frame": 95,
+        "optimized_frame": 94,
+        "changed_pixels": 549,
+        "maximum_channel_delta": 13
+      },
+      {
+        "start_ms": 1920,
+        "end_ms": 1940,
+        "original_frame": 96,
+        "optimized_frame": 95,
+        "changed_pixels": 549,
+        "maximum_channel_delta": 13
+      }
+    ]
+  }
+}

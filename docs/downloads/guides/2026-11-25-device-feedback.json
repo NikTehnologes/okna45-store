@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "date": "2026-11-25",
+  "release_context": "0.2.6",
+  "version_explicitly_reported": false,
+  "evidence": "user_report",
+  "message": "Проводом залил на реальное железо. Работает и обновлятор и ОС.",
+  "physical_hardware_used_by": "user",
+  "confirmed_scope": ["wired_installation", "host_updater_works", "os_runs"],
+  "agent_device_access": false,
+  "hardware_model_and_micropython_version": null,
+  "animation_fps_measured": false,
+  "heap_measured": false,
+  "network_apps_tested": false,
+  "power_loss_recovery_tested": false
+}

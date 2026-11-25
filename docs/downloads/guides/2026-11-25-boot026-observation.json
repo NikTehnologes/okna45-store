@@ -1,0 +1,279 @@
+{
+  "local_only": true,
+  "browser_used": false,
+  "physical_pico": false,
+  "profile": "pico / deterministic / offline",
+  "elapsed_host_seconds": 12.569,
+  "ready_matched": true,
+  "boot_error": null,
+  "desktop_active": true,
+  "desktop_version": "0.2.6",
+  "splash_modules_released": true,
+  "resident_guest_modules": [
+    "boot",
+    "desktop",
+    "framebuf",
+    "gc",
+    "ili9341",
+    "json",
+    "machine",
+    "main",
+    "math",
+    "micropython",
+    "ok45_api",
+    "ok45_boot",
+    "ok45_desktop",
+    "ok45_fs",
+    "ok45_kernel",
+    "ok45_loader",
+    "ok45_registry",
+    "ok45_time",
+    "ok45_ui",
+    "os",
+    "sys",
+    "time"
+  ],
+  "pixel_screen_version": 4184,
+  "playback": {
+    "frames": 96,
+    "repeats": 5,
+    "timeline_ms": 9700,
+    "elapsed_ms": 9702,
+    "nominal_fps": 50,
+    "frame_queue": false,
+    "buffer_bytes": 2560,
+    "dirty_bits_bytes": 160,
+    "updated_tiles": 581,
+    "changed_pixels": 17833,
+    "sent_rectangles": 4086
+  },
+  "lcd_samples": [
+    {
+      "stage": "initial",
+      "host_ms": 2775,
+      "lcd_sha256": "f13016012d0977a3835fe96a833b6017304b63646d958de743fba727cf7903ee"
+    },
+    {
+      "stage": "frame_12",
+      "host_ms": 3044,
+      "lcd_sha256": "4261a1a9d5c4d122632458f3e2df54d650ad3f24e81ae74426f3923faf636ace"
+    },
+    {
+      "stage": "frame_25",
+      "host_ms": 3308,
+      "lcd_sha256": "f1527d63432f6c269858b3ede06872a69271f4d6652b966101eb07a076c3b589"
+    },
+    {
+      "stage": "frame_38",
+      "host_ms": 3573,
+      "lcd_sha256": "8f157bd954b64426f2276a7629c534c83acebdc1f85300808526310c955565c8"
+    },
+    {
+      "stage": "frame_51",
+      "host_ms": 3836,
+      "lcd_sha256": "ad823390f8274a7713709fe089389e0660fcb21fec569924d21d1bcda62339ab"
+    },
+    {
+      "stage": "frame_63",
+      "host_ms": 4088,
+      "lcd_sha256": "76ba12168f9b10230d84b567ff414ffcc12c62283976a52bb56b529c4386869d"
+    },
+    {
+      "stage": "frame_76",
+      "host_ms": 4352,
+      "lcd_sha256": "ad0f17e394b489fa62444ba8e3d799e96a936f9ed2055817a2cfd16c9020bbcf"
+    },
+    {
+      "stage": "frame_90",
+      "host_ms": 4618,
+      "lcd_sha256": "c0ddcdbc61bcfa31e98bcad3b93f55e50ef0aafb6b2954decc6de4e96d1e7f85"
+    },
+    {
+      "stage": "frame_7",
+      "host_ms": 4876,
+      "lcd_sha256": "a49f1472bb95661ef742e41b2f9e48937e8030776f32ff04d1ad2df2a8917c39"
+    },
+    {
+      "stage": "frame_19",
+      "host_ms": 5128,
+      "lcd_sha256": "34cb336eb421f0077954af2ea7f17f1576a9968d0619944bfffbd444179a0959"
+    },
+    {
+      "stage": "frame_32",
+      "host_ms": 5392,
+      "lcd_sha256": "18957e8b84d80b868d3967515a2404bbe8bd580cf289d8d0915a8c5072d620aa"
+    },
+    {
+      "stage": "frame_46",
+      "host_ms": 5655,
+      "lcd_sha256": "283596b80d86d5acfa1b481da060184fe0f0ee51d32ddbbfc543935e764474a3"
+    },
+    {
+      "stage": "frame_58",
+      "host_ms": 5915,
+      "lcd_sha256": "f4b0dfbf428f816ef86414a0c6a777827d1bcf2a9d2918993caf23e993d9effc"
+    },
+    {
+      "stage": "frame_71",
+      "host_ms": 6187,
+      "lcd_sha256": "1ddf3aa26a44d8c1e0a9febc973b0961eda2f0f955c0b38be7344ca1ddc06c34"
+    },
+    {
+      "stage": "frame_84",
+      "host_ms": 6451,
+      "lcd_sha256": "7889c082383df20e072b293b44fec97a96848114e88efe5510206734b87bef5d"
+    },
+    {
+      "stage": "frame_1",
+      "host_ms": 6708,
+      "lcd_sha256": "4c7fa698f7a7e7b0fee4fe64014967589d8c15a563253a1427608ab08cfce697"
+    },
+    {
+      "stage": "frame_15",
+      "host_ms": 6981,
+      "lcd_sha256": "761f10d56d5297112e6b39d9ab8487d23a1a7ba481ac523839a88332767f85c6"
+    },
+    {
+      "stage": "frame_28",
+      "host_ms": 7247,
+      "lcd_sha256": "f3fe8035da6299a27a47a5ddb2aea48bcd1155be488c774e091f1cdce5824b9c"
+    },
+    {
+      "stage": "frame_41",
+      "host_ms": 7512,
+      "lcd_sha256": "89e7f5a4a75620e1a470bd65ad044966807b31fd5497e96e9151c04ba4ec1e48"
+    },
+    {
+      "stage": "frame_54",
+      "host_ms": 7790,
+      "lcd_sha256": "cf1d312addce78c6aaf6d23da51db363252b588783ec40bf940ac06783100396"
+    },
+    {
+      "stage": "frame_67",
+      "host_ms": 8051,
+      "lcd_sha256": "9bf846a71e97585fff20ff15567668b76e35847913a9dbd1b427c242f379f9fb"
+    },
+    {
+      "stage": "frame_80",
+      "host_ms": 8310,
+      "lcd_sha256": "6959c37cc90c15620408c1db828a1b63d52c224d603a95dcc096bbb1a0a9b102"
+    },
+    {
+      "stage": "frame_93",
+      "host_ms": 8566,
+      "lcd_sha256": "ba2d1d8b36dfb7040b6d26cfdfd76e09342c8e2f8abc61f8f9e5a4bf16422d01"
+    },
+    {
+      "stage": "frame_11",
+      "host_ms": 8841,
+      "lcd_sha256": "cac508902bbbe00cc2fed90dadf0f765ad233020c1d9a5f0e4fc72a4a215f7aa"
+    },
+    {
+      "stage": "frame_24",
+      "host_ms": 9108,
+      "lcd_sha256": "c4ff9ba51922746eac9f8c8febd7b1528c0d63442cc0af2581a4f993d3e38cdd"
+    },
+    {
+      "stage": "frame_37",
+      "host_ms": 9371,
+      "lcd_sha256": "3427f17b476c1fe2008ea584b9171426a8b10527326d179c9926d809f5fcc0b0"
+    },
+    {
+      "stage": "frame_50",
+      "host_ms": 9636,
+      "lcd_sha256": "612107419f49a0fb630986fcd779bb4c3274855741d8452bf9a26f0074210966"
+    },
+    {
+      "stage": "frame_63",
+      "host_ms": 9910,
+      "lcd_sha256": "76ba12168f9b10230d84b567ff414ffcc12c62283976a52bb56b529c4386869d"
+    },
+    {
+      "stage": "frame_76",
+      "host_ms": 10175,
+      "lcd_sha256": "ad0f17e394b489fa62444ba8e3d799e96a936f9ed2055817a2cfd16c9020bbcf"
+    },
+    {
+      "stage": "frame_89",
+      "host_ms": 10429,
+      "lcd_sha256": "2207e3be67c6937b9c0b51cb8bf159f07e3cd207c8eeb7ec1d61dc1d8e022251"
+    },
+    {
+      "stage": "frame_7",
+      "host_ms": 10703,
+      "lcd_sha256": "938712fee592b34897182d2f409160d2ddce323b517352c944bed034ef60b1da"
+    },
+    {
+      "stage": "frame_19",
+      "host_ms": 10955,
+      "lcd_sha256": "03f4d4b14678a135753ce6d3cb8372ca6aa23d3a86cd7c9813ebf7e8669bf0d1"
+    },
+    {
+      "stage": "frame_32",
+      "host_ms": 11212,
+      "lcd_sha256": "30b783acb5c255d9e12b1efd443d5892eae257b31204439c2cea95c99df34b1d"
+    },
+    {
+      "stage": "frame_46",
+      "host_ms": 11494,
+      "lcd_sha256": "b27ea13153970b34cfe7b55df34925aba48468886b84da3959186b2fb5f24dfd"
+    },
+    {
+      "stage": "frame_59",
+      "host_ms": 11762,
+      "lcd_sha256": "8bedf55ae6f715dae4a5b82f0af0a8fecfe6fca45b288b8697cad9216c212cab"
+    },
+    {
+      "stage": "frame_72",
+      "host_ms": 12024,
+      "lcd_sha256": "3ab0179cb40f7744596431d31b7d4b440ccba387bfa911b0f52e7d08a7abbb14"
+    },
+    {
+      "stage": "frame_85",
+      "host_ms": 12284,
+      "lcd_sha256": "6d0c0865236d485803d373dd8863b4451eb69b43cb376e21a9f880b917484af4"
+    },
+    {
+      "stage": "last_animation_state",
+      "host_ms": 12478,
+      "lcd_sha256": "93949d560f915d0f3c9f4fee8bfaf842dc35e5148217ca07d957c260678d6f27"
+    }
+  ],
+  "distinct_animation_lcd_states": 36,
+  "performance": {
+    "profile": "pico",
+    "enabled": true,
+    "cpu_hz": 125000000,
+    "peripheral_hz": 125000000,
+    "cpu_opcode_units_per_second": 1000000.0,
+    "cpu_model": "approximate CPython opcode budget, not ARM cycle emulation",
+    "cpu_calibrated": false,
+    "quantum_ms": 2.0,
+    "wait_backend": "windows_high_resolution_timer",
+    "buses_hz": {
+      "spi": {
+        "0": 31250000
+      },
+      "i2c": {
+        "1": 100000
+      }
+    },
+    "modeled_seconds": {
+      "cpu": 10.089381,
+      "spi": 0.103496,
+      "i2c": 0.0004,
+      "native": 0.001397,
+      "sleep": 0.417887
+    },
+    "throttled_seconds": 0.309781,
+    "guest_opcodes": 10089381,
+    "spi_bytes": 404280,
+    "i2c_bytes": 2,
+    "limitations": [
+      "CPU/native costs need on-device calibration.",
+      "A slower host can be slower than the Pico; pacing never speeds it up.",
+      "RAM is a capacity estimate, not a complete MicroPython heap implementation.",
+      "Host HTTP server and PNG encoding are not charged to guest CPU."
+    ]
+  }
+}
